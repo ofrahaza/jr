@@ -1,5 +1,3 @@
-<<<<<<< HEAD
 #JavaRush.ru tasks
-=======
->>>>>>> init
- https://javarush.ru
+>>>>>>> 
+https://javarush.ru
