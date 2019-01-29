@@ -6,6 +6,7 @@ public class Person {
     private String name;
     private Sex sex;
     private Date birthDate;
+    private Date birthDate2;
 
     private Person(String name, Sex sex, Date birthDate) {
         this.name = name;
