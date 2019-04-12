@@ -16,11 +16,10 @@ public class Solution {
         String filePath = scan.nextLine();
         FileInputStream inFile = new FileInputStream(filePath);
         int count = 0;
-       // int dbyte = Integer.MIN_VALUE;
 
         List list = new ArrayList<Integer>();
         List result = new ArrayList<Integer>();
-        result.add(Integer.MIN_VALUE);
+
 
         while(inFile.available() > 0) {
             list.add(inFile.read());
@@ -30,20 +29,28 @@ public class Solution {
             if (Collections.frequency(list, list.get(i)) > count)  {
                 result.clear();
                 count = Collections.frequency(list, list.get(i));
-                //dbyte = (int) list.get(i);
                 result.add(list.get(i));
+                for (int j = i+1; j < list.size(); j++) {
+                    if (list.get(j) == list.get(i)) {
+                        list.remove(j);
+                    }
+                }
             }
             else {
-                if ((Collections.frequency(list, list.get(i)) == count) && (list.get(i) != list.get(0))) {
+                if (Collections.frequency(list, list.get(i)) == count) {
                     result.add(list.get(i));
+                    for (int j = i+1; j < list.size(); j++) {
+                        if (list.get(j) == list.get(i)) {
+                            list.remove(j);
+                        }
+                    }
                 }
             }
         }
 
         for (int i = 0; i < result.size(); i++) {
-            System.out.print((byte) result.get(i) + " ");
+            System.out.print(result.get(i) + " ");
         }
-
         inFile.close();
     }
 }
