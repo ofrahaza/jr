@@ -4,22 +4,33 @@ package com.javarush.task.task18.task1820;
 Округление чисел
 */
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
-        FileInputStream inFile1 = new FileInputStream(scan.nextLine());
-        FileOutputStream outFile2 = new FileOutputStream(scan.nextLine());
+        BufferedReader f1 = new BufferedReader(new FileReader(scan.nextLine()));
+        BufferedWriter f2 = new BufferedWriter(new FileWriter(scan.nextLine()));
+        String line;
+        ArrayList<String> list = new ArrayList<String>();
 
+        while((line = f1.readLine()) != null){
+            Collections.addAll(list, line.split(" "));
+        }
 
-        byte[] b1 = new byte[inFile1.available()];
-        inFile1.read(b1);
-        outFile2.write(b1);
-        inFile1.close();
-        outFile2.close();
+        int f;
+        for (String s : list) {
+            f = (int) Math.round(Double.parseDouble(s));
+            System.out.print(f + " ");
+            f2.write(f + " ");
+            //f2.write(" ");
+        }
+        f1.close();
+        f2.close();
     }
 }
+
+
