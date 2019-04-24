@@ -11,40 +11,42 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        String file, id, productName, price, quantity;
-        file = scan.nextLine();
-        BufferedReader fReader = new BufferedReader(new FileReader(file));
-        FileWriter fWriter = new FileWriter(file);
-        String line;
-        int maxID = Integer.MIN_VALUE;
-        while((line = fReader.readLine()) != null) {
-            if(Integer.valueOf(line.substring(0,line.indexOf(" "))) > maxID) {
-                maxID = Integer.valueOf(line.substring(0, line.indexOf(" ")));
-            }
-        }
-        maxID++;
 
-        if (args[0] != null) {
+        if (args.length > 0) {
+            Scanner scan = new Scanner(System.in);
+            String file, id, productName, price, quantity;
+            file = scan.nextLine();
+            BufferedReader fReader = new BufferedReader(new FileReader(file));
+            String line;
+            int maxID = -1;
+
+                while((line = fReader.readLine()) != null) {
+                    if(Integer.valueOf(line.substring(0,8).trim()) > maxID) {
+                        maxID = Integer.valueOf(line.substring(0,8).trim());
+                    }
+                }
+
+            fReader.close();
+            maxID++;
             id = "" + maxID;
             productName = editString(args[1],30);
             price = editString(args[2],8);
             quantity = editString(args[3],4);
-            line = id + " " + productName + " " + price + " "  + quantity;
+            line = id + productName + price + quantity;
+            FileWriter fWriter = new FileWriter(file, true);
+            fWriter.write("\r\n");
             fWriter.write(line);
+            fWriter.close();
         }
-        fReader.close();
-        fWriter.close();
     }
-
 
     public static String editString(String s, int count) {
         String result;
         if (s.length() > count) {
-            result = s.substring(0,count-1);
+            result = s.substring(0,count);
         } else {
             result = s;
-            for (int i = 0; i < count - s.length() - 1; i++) {
+            for (int i = 0; i < count - s.length(); i++) {
                 result = result + " ";
             }
         }
