@@ -27,6 +27,7 @@ public class Solution {
                 }
 
             fReader.close();
+
             maxID++;
             id = "" + maxID;
             productName = editString(args[1],30);
@@ -34,6 +35,7 @@ public class Solution {
             quantity = editString(args[3],4);
             line = id + productName + price + quantity;
             FileWriter fWriter = new FileWriter(file, true);
+
             fWriter.write("\r\n");
             fWriter.write(line);
             fWriter.close();
