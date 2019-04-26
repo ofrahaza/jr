@@ -22,7 +22,7 @@ public class Solution {
         while ((s = fReader.readLine()) != null) {
             matcher = pattern.matcher(s);
             while(matcher.find()) {
-                count++;
+
             }
         }
         reader.close();
