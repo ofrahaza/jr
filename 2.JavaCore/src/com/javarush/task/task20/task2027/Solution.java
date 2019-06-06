@@ -10,10 +10,10 @@ public class Solution {
     public static void main(String[] args) {
         int[][] crossword = new int[][]{
                 {'f', 'd', 'e', 'r', 'l', 'k'},
-                {'u', 's', 'a', 'm', 'e', 'o'},
-                {'l', 'n', 'g', 'r', 'o', 'v'},
-                {'m', 'l', 'p', 'r', 'r', 'h'},
-                {'p', 'o', 'e', 'e', 'j', 'j'}
+                {'u', 's', 'a', 'm', 'e', 'm'},
+                {'l', 'a', 'g', 'r', 'o', 'o'},
+                {'m', 'm', 'p', 'r', 'r', 'h'},
+                {'p', 'e', 'e', 'e', 'j', 'j'}
         };
        // detectAllWords(crossword, "home", "same");
 
