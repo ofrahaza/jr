@@ -9,8 +9,6 @@ target/
 *.iws
 *.class
 *.info
-*.properties
-*.jar
 
 /1.JavaSyntax/
 /4.JavaCollections/
