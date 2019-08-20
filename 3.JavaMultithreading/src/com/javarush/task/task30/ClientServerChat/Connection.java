@@ -1,4 +1,4 @@
-package com.javarush.task.task30.task3008;
+package com.javarush.task.task30.ClientServerChat;
 
 import java.io.Closeable;
 import java.io.IOException;
