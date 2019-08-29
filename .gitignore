@@ -8,7 +8,6 @@ target/
 *.iml
 *.iws
 *.class
-*.info
 .gitignore
 /4.JavaCollections/
 /5.OnlineInternship/

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaRush</title>
+    <style>
+		h3 {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+        mark { 
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .dark-content {
+            font-size: 15px;
+            line-height: 1.62;
+            overflow-wrap: break-word;
+            font-family: Arial, Helvetica, sans-serif;            
+        }
+    </style>	
+</head>
+<body class="dark-content">
+	<div style="padding: 10px 30px">
+		<h3>Многопоточность в Java</h3>    
+		<div>
+			Уровень 1 - Устройство объекта Object: equals, hashCode, clone, wait, notify, toString()<p>
+			Уровень 2 - String: mutable, immutable, format, StringTokenizer, StringBuilder, StringBuffer<p>
+			Уровень 3 - Внутренние классы, примеры: Map.Entry<p>
+			Уровень 4 - Внутренние классы, особенности реализации<p>
+			Уровень 5 - Создание и остановка нитей: start, interrupt, sleep, yield.<p>
+			Уровень 6 - Совместный доступ к монопольным данным: synchronized, volatile<p>
+			Уровень 7 - DeadLock. Wait, notify, notifyAll<p>
+			Уровень 8 - ThreadGroup, ThreadLocal, Executor, ExecutorService, Callable. Опыт работы с Jsoup<p>
+			Уровень 9 - Autoboxing, особенности реализации<p>
+			Уровень 10 - Операторы: числовые, логические и бинарные. Опыт работы с Swing<p>
+		</div>
+	</div>
+</body>
+</html>
+
