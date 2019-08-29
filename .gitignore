@@ -10,7 +10,6 @@ target/
 *.class
 *.info
 .gitignore
-/1.JavaSyntax/
 /4.JavaCollections/
 /5.OnlineInternship/
 /out/
