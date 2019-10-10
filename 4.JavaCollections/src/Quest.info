@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaRush</title>
+    <style>
+		h3 {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+        mark { 
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .dark-content {
+            font-size: 15px;
+            line-height: 1.62;
+            overflow-wrap: break-word;
+            font-family: Arial, Helvetica, sans-serif;            
+        }
+    </style>	
+</head>
+<body class="dark-content">
+	<div style="padding: 10px 30px">
+		<h3>Java Collections</h3>    
+		<div>
+			Уровень 1 - Работа с файлами и архивами<p>
+			Уровень 2 - RMI и динамический прокси. Опыт работы с Swing<p>
+			Уровень 3 - JSON, JavaScript. Опыт работы с Guava, Apache Commons Collections, JUnit<p>
+			Уровень 4 - Рекурсия. Сборка мусора и типы ссылок в Java. Логгирование<p>
+			Уровень 5 - Системы контроля версий: Git и SVN. Generics<p>
+			Уровень 6 - Основные паттерны для создания веб приложений. Углубленное изучение коллекций<p>
+			Уровень 7 - Паттерны проектирования. Утилитные классы Arrays. Collections<p>
+			Уровень 8 - Методологии разработки. Аннотации в Java. Иерархия исключений<p>
+			Уровень 9 - Создаем первое веб приложение. Работа с Tomcat и Idea<p>
+			Уровень 10 - URI, URL. REST сервисы. Создаем свое клиент-серверное приложение.<p>
+		</div>
+	</div>
+</body>
+</html>
