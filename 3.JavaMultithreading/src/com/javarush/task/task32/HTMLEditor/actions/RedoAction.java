@@ -1,6 +1,6 @@
-package com.javarush.task.task32.task3209.actions;
+package com.javarush.task.task32.HTMLEditor.actions;
 
-import com.javarush.task.task32.task3209.View;
+import com.javarush.task.task32.HTMLEditor.View;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

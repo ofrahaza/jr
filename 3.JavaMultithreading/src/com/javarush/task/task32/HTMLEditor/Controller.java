@@ -1,9 +1,7 @@
-package com.javarush.task.task32.task3209;
+package com.javarush.task.task32.HTMLEditor;
 
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultEditorKit;
-import javax.swing.text.Document;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 import java.io.*;

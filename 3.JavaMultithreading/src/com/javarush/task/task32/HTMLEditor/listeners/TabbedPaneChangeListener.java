@@ -1,6 +1,6 @@
-package com.javarush.task.task32.task3209.listeners;
+package com.javarush.task.task32.HTMLEditor.listeners;
 
-import com.javarush.task.task32.task3209.View;
+import com.javarush.task.task32.HTMLEditor.View;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
