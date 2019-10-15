@@ -41,7 +41,28 @@ public class View extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String action = e.getActionCommand();
+        switch (action) {
+            case "Новый" :
+                controller.createNewDocument();
+                break;
+            case "Открыть" :
+                controller.openDocument();
+                break;
+            case "Сохранить" :
+                controller.saveDocument();
+                break;
+            case "Сохранить как..." :
+                controller.saveDocumentAs();
+                break;
+            case "Выход" :
+                controller.exit();
+                break;
+            case "О программе" :
+                showAbout();
+                break;
 
+        }
     }
 
     public void init() {
@@ -124,5 +145,32 @@ public class View extends JFrame implements ActionListener {
     }
 
     public void selectedTabChanged() {
+        if (tabbedPane.getSelectedIndex() == 0) {
+            controller.setPlainText(plainTextPane.getText());
+        } else {
+            plainTextPane.setText(controller.getPlainText());
+        }
+        resetUndo();
+    }
+
+    public boolean isHtmlTabSelected() {
+        if (tabbedPane.getSelectedIndex() == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void selectHtmlTab() {
+        tabbedPane.setSelectedIndex(0);
+        resetUndo();
+    }
+
+    public void update() {
+        htmlTextPane.setDocument(controller.getDocument());
+    }
+
+    public void showAbout() {
+        JOptionPane.showMessageDialog(tabbedPane.getSelectedComponent(), "Версия 1.0", "О программме", JOptionPane.INFORMATION_MESSAGE);
     }
 }
